@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart'; // Import rating bar
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'movie.dart';
 
 class MovieDetailPage extends StatelessWidget {
-  const MovieDetailPage({Key? key}) : super(key: key);
+  const MovieDetailPage({super.key});
 
   @override
   Widget build(BuildContext context) {
