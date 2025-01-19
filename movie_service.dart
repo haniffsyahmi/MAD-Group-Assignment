@@ -1,10 +1,9 @@
-import 'package:homepage/movie.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:groupassignment/movie.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class MovieService{
-  final String? apiKey = dotenv.env['TMDB_API_KEY']; 
+  final String? apiKey = 'TMDB_API_KEY';
   final String baseUrl = 'https://api.themoviedb.org/3';
 
   Future<List<Movie>> getPopularMovies() async {
