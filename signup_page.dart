@@ -19,7 +19,9 @@ class _SignupPageState extends State<SignupPage> {
         password: _passwordController.text,
       );
 
-      Navigator.pop(context);
+      if (mounted) {
+        Navigator.pop(context);
+      }
     } on FirebaseAuthException catch (e) {
       String errorMessage = 'An error occurred during sign up.';
 
@@ -33,9 +35,11 @@ class _SignupPageState extends State<SignupPage> {
         errorMessage = 'The email address is not valid.';
       }
 
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(errorMessage)),
-      );
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(errorMessage)),
+        );
+      }
     }
   }
 
